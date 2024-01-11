@@ -61,6 +61,25 @@ app.post("/signup",async(req,res)=>{
 
 })
 
+app.post("/chatbot", async (req, res) => {
+    const { message } = req.body;
+
+    try {
+        // Here you would implement your chatbot logic.
+        // For demonstration, a simple response is sent back.
+        const response = handleMessage(message);
+        res.json({ reply: response });
+    } catch (e) {
+        res.status(500).json("chatbot error");
+    }
+});
+
+function handleMessage(message) {
+    // This is a placeholder for your chatbot logic.
+    // For now, it just echoes the message.
+    return `You said: ${message}`;
+}
+
 app.listen(8000,()=>{
     console.log("port connected");
 })

@@ -1,9 +1,10 @@
 
-import Home from "./components/Home"
+import Home from "./components/Chatbot"
 import Login from "./components/Login"
 import Signup from "./components/Signup"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from 'react';
+import Chatbot from "./components/Chatbot";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Login/>}/>
           <Route path="/signup" element={<Signup/>}/>
-          <Route path="/home" element={<Home/>}/>
+          <Route path="/chatbot" element={<Chatbot/>}/>
         </Routes>
       </Router>
     </div>
